@@ -1,2 +1,9 @@
 <h1>Portals#new</h1>
 <p>Find me in app/views/portals/new.html.erb</p>
+
+<%= simple_form_for [ @portal ] do |f| %>
+  <%= f.input :name %>
+  <%= f.input :description %>
+  <%= f.input :price %>
+  <%= f.submit "Add Portal", class: "btn btn-success" %>
+<% end %>

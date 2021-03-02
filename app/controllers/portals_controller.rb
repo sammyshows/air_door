@@ -1,5 +1,5 @@
 class PortalsController < ApplicationController
-  before_action :set_portal, only: [:index, :show, :new, :create]
+  before_action :set_portal, only: [:index, :show, :create]
 
   def index
     @portals = Portal.all
@@ -9,9 +9,17 @@ class PortalsController < ApplicationController
   end
 
   def new
+    @portal = Portal.new
   end
 
   def create
+    @portal = Portal.new(portal_params)
+
+    if @portal.save
+      redirect_to portal_path(@portal)
+    else
+      render :new
+    end
   end
 
   private
