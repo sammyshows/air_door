@@ -2,6 +2,7 @@ class PortalsController < ApplicationController
   before_action :set_portal, only: [:index, :show, :new, :create]
 
   def index
+    @portals = Portal.all
   end
 
   def show
