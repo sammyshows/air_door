@@ -1,5 +1,5 @@
 class PortalsController < ApplicationController
-  before_action :set_portal, only: [:index, :show, :create]
+  before_action :set_portal, only: [:show, :edit]
 
   def index
     @portals = Portal.all
@@ -20,6 +20,11 @@ class PortalsController < ApplicationController
     else
       render :new
     end
+  end
+
+  def edit
+    redirect_to root_path unless @portal.user == current_user
+
   end
 
   private
