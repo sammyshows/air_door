@@ -1,10 +1,7 @@
 <h1>Portals</h1>
 
 <ul>
-
   <% @portals.each do |portal| %>
-    <li>
-      <%= portal.name - portal.description - portal.price%>
-    </li>
+      <li><%= link_to portal.name, portal_path(portal) %></li>
   <% end %>
 </ul>
