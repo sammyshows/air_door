@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   resources :portals, only: [:index, :show, :new, :create, :edit] do
     resources :bookings, only: [:new, :create]
   end
+  resource :dashboard, only: [:show]
 
   get "dashboard" , to: "dashboards#show"
 

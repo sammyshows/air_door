@@ -1,7 +1,8 @@
 class DashboardsController < ApplicationController
-  def index
+
+  def show
+    @portals = current_user.portals
+    @bookings = current_user.bookings
   end
 
-  def update
-  end
 end
