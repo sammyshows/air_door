@@ -2,6 +2,8 @@
 
 <ul>
   <% @portals.each do |portal| %>
+    <% unless portal.user == current_user %>
       <li><%= link_to portal.name, portal_path(portal) %></li>
+    <% end %>
   <% end %>
 </ul>
