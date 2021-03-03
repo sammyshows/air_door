@@ -1,5 +1,5 @@
 class PortalsController < ApplicationController
-  before_action :set_portal, only: [:show, :edit]
+  before_action :set_portal, only: [:show, :edit, :update]
 
   def index
     @portals = Portal.all
@@ -16,14 +16,21 @@ class PortalsController < ApplicationController
     @portal = Portal.new(portal_params)
     @portal.user = current_user
     if @portal.save
-      redirect_to portal_path(@portal)
+      redirect_to dashboard_path
     else
       render :new
     end
   end
 
   def edit
-    redirect_to root_path unless @portal.user == current_user
+  end
+
+  def update
+    if @portal.update(portal_params)
+      redirect_to dashboard_path
+    else
+      render :edit
+    end
 
   end
 
@@ -37,3 +44,4 @@ class PortalsController < ApplicationController
     @params = params.require(:portal).permit(:name, :description, :price)
   end
 end
+
