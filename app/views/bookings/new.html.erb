@@ -1,8 +1,12 @@
-<h1>Bookings#new</h1>
-<p>Find me in app/views/bookings/new.html.erb</p>
+<h1>Book a portal</h1>
+<p>Only one step away from this whimsical experience</p>
 
 <%= simple_form_for [ @portal, @booking ] do |f| %>
   <%= f.input :start_date %>
   <%= f.input :end_date %>
   <%= f.submit "Confirm Booking", class: "btn btn-success" %>
 <% end %>
+
+
+
+
