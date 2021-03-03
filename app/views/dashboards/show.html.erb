@@ -1,49 +1,52 @@
 <h1>My Dashboard</h1>
-
+<br>
 <h3>Bookings</h3>
 
 <ul>
   <% @bookings.each do |booking| %>
-      <li>
-        <%= booking.start_date %>
-        <%= booking.end_date %>
-        <%= booking.total_price %>
-        <%= booking.portal.name %>
-      </li>
+    <br>
+    <h5><strong><%= booking.portal.name %></strong></h5>
+      <p>Start date: <%= booking.start_date %></p>
+      <p>End date: <%= booking.end_date %></p>
+      <%= booking.total_price %>
+      <%= link_to 'View', portal_path(booking.portal), class: "btn btn-success" %>
   <% end %>
 </ul>
 
 <% if @portals.exists? %>
-
+<br>
 <h3>Your Portals</h3>
 <% end %>
 
 <ul>
   <% @portals.each do |portal| %>
     <% if portal.user == current_user %>
-      <li>
-        <%= portal.name %>
-        <%= portal.description %>
-        <%= portal.price %>
-      </li>
+      <br>
+      <br>
+      <h5><strong><%= portal.name %></strong></h5>
+      <p><%= portal.description %></p>
+      <p>Current price: $<%= portal.price %></p>
+      <div>
+        <%= link_to 'View', portal_path(portal), class: "btn btn-success" %>
+        <%= link_to 'Edit', edit_portal_path(portal), class: "btn btn-warning" %>
+      </div>
     <% end %>
   <% end %>
 </ul>
 
 <% if @portals.exists? %>
-
+<br>
 <h3>Your offers</h3>
 <% end %>
 
 <ul>
   <% @all_bookings.each do |booking| %>
     <% if @portals.include?(booking.portal) %>
-      <li>
-        <%= booking.start_date %>
-        <%= booking.end_date %>
-        <%= booking.total_price %>
-        <%= booking.portal.name %>
-      </li>
+      <br>
+      <h5><strong><%= booking.portal.name %></strong></h5>
+      <p>Start date: <%= booking.start_date %></p>
+      <p>End date: <%= booking.end_date %></p>
+      <%= booking.total_price %>
     <% end %>
   <% end %>
 </ul>
