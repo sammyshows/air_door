@@ -1,4 +1,6 @@
-<h1>Dashboard</h1>
+<h1>My Dashboard</h1>
+
+<h3>Bookings</h3>
 
 <ul>
   <% @bookings.each do |booking| %>
@@ -6,6 +8,42 @@
         <%= booking.start_date %>
         <%= booking.end_date %>
         <%= booking.total_price %>
+        <%= booking.portal.name %>
       </li>
+  <% end %>
+</ul>
+
+<% if @portals.exists? %>
+
+<h3>Your Portals</h3>
+<% end %>
+
+<ul>
+  <% @portals.each do |portal| %>
+    <% if portal.user == current_user %>
+      <li>
+        <%= portal.name %>
+        <%= portal.description %>
+        <%= portal.price %>
+      </li>
+    <% end %>
+  <% end %>
+</ul>
+
+<% if @portals.exists? %>
+
+<h3>Your offers</h3>
+<% end %>
+
+<ul>
+  <% @all_bookings.each do |booking| %>
+    <% if @portals.include?(booking.portal) %>
+      <li>
+        <%= booking.start_date %>
+        <%= booking.end_date %>
+        <%= booking.total_price %>
+        <%= booking.portal.name %>
+      </li>
+    <% end %>
   <% end %>
 </ul>
