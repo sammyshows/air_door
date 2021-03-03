@@ -14,7 +14,7 @@ class PortalsController < ApplicationController
 
   def create
     @portal = Portal.new(portal_params)
-
+    @portal.user = current_user
     if @portal.save
       redirect_to portal_path(@portal)
     else
