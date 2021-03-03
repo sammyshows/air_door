@@ -6,7 +6,7 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 # User.create(email: "user@user.com", password: "password")
-User.last.create(name: "Totally Lit", description: "yeah its sweet", price: 3500)
+# User.last.create(name: "Totally Lit", description: "yeah its sweet", price: 3500)
 
 pyramids_of_giza = { name: "Pyramids of Giza", description: "A few triangles", price: 1000 }
 great_barrier_reef = { name: "Great Barrier Reef", description: "Beautiful coral", price: 1000 }
