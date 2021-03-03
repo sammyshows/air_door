@@ -1,8 +1,13 @@
-<h1>Booking Confirmation</h1>
-<p>Please enter how long you would like to rent the Portal for</p>
+<h1>Book a portal</h1>
+<p>Only one step away from this whimsical experience</p>
+
 
 <%= simple_form_for [ @portal, @booking ] do |f| %>
   <%= f.input :start_date %>
   <%= f.input :end_date %>
   <%= f.submit "Confirm Booking", class: "btn btn-success" %>
 <% end %>
+
+
+
+
