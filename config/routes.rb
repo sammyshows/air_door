@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   devise_for :users
 
-  resources :portals, only: [:index, :show, :new, :create, :edit] do
+  resources :portals, only: [:index, :show, :new, :create, :edit, :update] do
     resources :bookings, only: [:new, :create]
   end
   resource :dashboard, only: [:show]
