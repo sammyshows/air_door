@@ -1,5 +1,5 @@
 class PortalsController < ApplicationController
-  before_action :set_portal, only: [:show, :edit, :update]
+  before_action :set_portal, only: [:show, :edit, :update, :destroy]
 
   def index
     @portals = Portal.all
@@ -40,12 +40,10 @@ class PortalsController < ApplicationController
 
   end
 
-  # def destroy
-  #   @portal.user = current_ser
-  #   if @portal.destroy
-  #     redirect_to dashboard_path
-  #   end
-  # end
+  def destroy
+    @portal.destroy
+    redirect_to dashboard_path, :notice => "Your Portal has been deleted"
+  end
 
   private
 

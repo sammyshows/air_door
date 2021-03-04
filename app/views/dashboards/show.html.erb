@@ -10,6 +10,7 @@
       <p>End date: <%= booking.end_date %></p>
       <%= booking.total_price %>
       <%= link_to 'View', portal_path(booking.portal), class: "btn btn-success" %>
+      <%= link_to 'Delete', booking_path(booking.id), method: :delete, data: { confirm: "Are you sure you want to delete your booking?"} %>
   <% end %>
 </ul>
 
@@ -29,6 +30,8 @@
       <div>
         <%= link_to 'View', portal_path(portal), class: "btn btn-success" %>
         <%= link_to 'Edit', edit_portal_path(portal), class: "btn btn-warning" %>
+        <%= link_to 'Delete', portal_path(portal.id), method: :delete, data: { confirm: "Are you sure you want to delete your Portal?"} %>
+
       </div>
     <% end %>
   <% end %>
