@@ -1,8 +1,15 @@
 <h1>Portals</h1>
 
+
 <ul>
   <% @portals.each do |portal| %>
     <% unless portal.user == current_user %>
+      <% if portal.cover_photo.attached? %>
+        <%= link_to portal_path(portal) do %>
+          <%= cl_image_tag(portal.cover_photo.key,
+                width: 400, height: 300, crop: :fill) %>
+          <% end %>
+        <% end %>
       <li><%= link_to portal.name, portal_path(portal) %></li>
     <% end %>
   <% end %>
