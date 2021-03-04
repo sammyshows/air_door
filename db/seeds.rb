@@ -17,8 +17,8 @@ User.create(email: "usertwo@user.com", password: "password")
 
 pyramids_of_giza = { name: "Pyramids of Giza", description: "A few triangles", price: 10000 }
 great_barrier_reef = { name: "Great Barrier Reef", description: "Beautiful coral", price: 3000 }
-stonehenge = { name: "Stonehenge", description: "A few rocks", price: 1500 }
-great_wall_of_china = { name: "Great Wall of China", description: "A wall", price: 7000 }
+stonehenge = { name: "Stonehenge", description: "A few rocks", price: 1500, address: "Salisbury SP4 7DE, United Kingdom" }
+great_wall_of_china = { name: "Great Wall of China", description: "A wall", price: 7000, address: "Huairou District, China" }
 mt_everest = { name: "Mount Everest", description: "A hill", price: 4000 }
 chichén_itzá = { name: "Chichén Itzá", description: "A Mayan city", price: 30000 }
 petra = { name: "Petra", description: "Ancient city", price: 15000 }

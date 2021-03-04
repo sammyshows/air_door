@@ -3,6 +3,12 @@ class PortalsController < ApplicationController
 
   def index
     @portals = Portal.all
+    @markers = @portals.geocoded.map do |portal|
+      {
+        lat: portal.latitude,
+        lng: portal.longitude
+      }
+    end
   end
 
   def show
@@ -33,6 +39,13 @@ class PortalsController < ApplicationController
     end
 
   end
+
+  # def destroy
+  #   @portal.user = current_ser
+  #   if @portal.destroy
+  #     redirect_to dashboard_path
+  #   end
+  # end
 
   private
 

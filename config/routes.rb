@@ -1,8 +1,8 @@
 Rails.application.routes.draw do
   devise_for :users
 
-  resources :portals, only: [:index, :show, :new, :create, :edit, :update] do
-    resources :bookings, only: [:new, :create]
+  resources :portals, only: [:index, :show, :new, :create, :edit, :update, :destroy] do
+    resources :bookings, only: [:new, :create, :destroy]
   end
   resource :dashboard, only: [:show]
 
