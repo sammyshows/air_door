@@ -1,4 +1,5 @@
 class BookingsController < ApplicationController
+
   def new
     @booking = Booking.new
     @portal = Portal.find(params[:portal_id])
@@ -15,6 +16,12 @@ class BookingsController < ApplicationController
     else
       render :new
     end
+  end
+
+  def destroy
+    @booking = Booking.find_by(params[:portal_id])
+    @booking.destroy
+    redirect_to dashboard_path, :notice => "Your booking has been deleted"
   end
 
   private

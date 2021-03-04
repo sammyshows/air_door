@@ -1,8 +1,14 @@
 class PortalsController < ApplicationController
-  before_action :set_portal, only: [:show, :edit, :update]
+  before_action :set_portal, only: [:show, :edit, :update, :destroy]
 
   def index
     @portals = Portal.all
+    @markers = @portals.geocoded.map do |portal|
+      {
+        lat: portal.latitude,
+        lng: portal.longitude
+      }
+    end
   end
 
   def show
@@ -36,6 +42,11 @@ class PortalsController < ApplicationController
       render :edit
     end
 
+  end
+
+  def destroy
+    @portal.destroy
+    redirect_to dashboard_path, :notice => "Your Portal has been deleted"
   end
 
   private

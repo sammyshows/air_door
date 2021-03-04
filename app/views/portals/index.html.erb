@@ -10,6 +10,11 @@
                 class: "card-images", height: 300, fit: :clip) %>
           <% end %>
         <% end %>
+      <li><%= link_to portal.name, portal_path(portal) %></li>
+    <div id="map"
+     style="width: 300px; height: 300px;"
+     data-markers="<%= @markers.to_json %>"
+     data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"></div>
       <h5><%= portal.name %></h5>
   </div>
       <% end %>
