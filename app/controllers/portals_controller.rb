@@ -54,7 +54,7 @@ class PortalsController < ApplicationController
   end
 
   def portal_params
-    @params = params.require(:portal).permit(:name, :description, :price)
+    @params = params.require(:portal).permit(:name, :description, :price, :cover_photo, photos: [])
   end
 end
 
