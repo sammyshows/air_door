@@ -1,5 +1,14 @@
 <h1>Portals</h1>
 
+<%= form_tag portals_path, method: :get do %>
+  <%= text_field_tag :query,
+    params[:query],
+    class: "form-control",
+    placeholder: "Find a Portal by location"
+  %>
+  <%= submit_tag "Search", class: "btn btn-primary" %>
+<% end %>
+
 <div class="card-columns">
   <% @portals.each do |portal| %>
     <% unless portal.user == current_user %>

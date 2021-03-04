@@ -11,6 +11,15 @@ class PortalsController < ApplicationController
     end
   end
 
+  def index
+    if params[:query].present?
+      sql_query = "title ILIKE :query OR synopsus ilike :query"
+      @portals = Portal.where(sql_query, query: "%#{params[:query]}%")
+    else
+      @portals = Portal.all
+    end
+  end
+
   def show
       @markers = [{
       lat: @portal.latitude,
