@@ -1,4 +1,4 @@
-<h1 id="index-page-header">Portals available near you</h1>
+<h1 id="index-page-header">All the best Portals in one place...</h1>
 
 <div class="card-columns">
   <% @portals.each do |portal| %>
@@ -10,7 +10,11 @@
               class: "card-images", height: 300, fit: :clip) %>
           <% end %>
         <% end %>
-        <h5 id="card_name"><%= portal.name %></h5>
+        <div id="card_details">
+          <h5><%= portal.name %></h5>
+          <p><%= portal.description %></p>
+          <p><strong>$<%= portal.price %></strong></p>
+        </div>
       <% end %>
     </div>
   <% end %>

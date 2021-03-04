@@ -11,10 +11,10 @@
 }
 
 .card:hover {
-  // -webkit-transform: rotate(3deg) skewY(3deg);
-  // transform: rotate(3deg) skewY(3deg);
-  -webkit-transform: translateY(-10px);
-  transform: translateY(-10px);
+  -webkit-transform: scale(1.05);
+  transform: scale(1.05);
+  // -webkit-transform: translateY(-10px);
+  // transform: translateY(-10px);
 
   -webkit-box-shadow: 0 10px 30px rgba(0,0,0,0.23), 0 15px 40px rgba(166,173,201,.2);
   box-shadow: 0 10px 10px rgba(0,0,0,0.23), 0 15px 40px rgba(166,173,201,.2);
@@ -30,21 +30,32 @@
 }
 
 .card-images {
+  height: 200px;
   width: 100%;
   border: none;
   border-radius: 8px 8px 0 0;
+  object-fit: cover;
 }
 
-#card_name {
+#card_details {
   margin: auto;
   padding: 12px;
-  height: 50px;
-  text-align: center;
   color: black;
   border-radius: 0 0 8px 8px;
+  background-color: #F4F4F4;
+  font-family: 'Noto Sans SC', sans-serif;
+  font-weight: 100;
+  p {
+    margin-bottom: 8px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis
+  }
 }
 
 #index-page-header {
   margin-top: 30px;
   margin-bottom: 10px;
+  font-family: 'Noto Sans SC', sans-serif;
+  font-weight: 100;
 }
