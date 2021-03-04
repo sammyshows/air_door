@@ -1,5 +1,4 @@
 .card {
-  position: relative;
   margin-top: 40px;
   width: 100%;
   margin-bottom: 30px;
@@ -24,6 +23,7 @@
 
 .card-columns {
   column-gap: 3.5rem;
+  column-fill: balance;
 }
 
 .card-images {
