@@ -12,6 +12,10 @@ class PortalsController < ApplicationController
   end
 
   def show
+      @markers = [{
+      lat: @portal.latitude,
+      lng: @portal.longitude,
+    }]
   end
 
   def new

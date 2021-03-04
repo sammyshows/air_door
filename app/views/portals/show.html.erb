@@ -6,5 +6,13 @@
 
 <h6><%= @portal.price %></h6>
 
+    <div id="map"
+    style="width: 400px; height: 300px;"
+    data-markers="<%= @markers.to_json %>"
+    data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"></div>
+
+<br>
+
 <%= link_to 'View all portals', portals_path, class: "btn btn-primary" %>
 <%= link_to 'Create booking', new_portal_booking_path(@portal), class: "btn btn-success" %>
+

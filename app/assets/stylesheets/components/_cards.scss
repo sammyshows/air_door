@@ -1,0 +1,18 @@
+// .card-columns {
+//   display: flex;
+//   justify-content: space-between;
+//   // flex-wrap: wrap;
+// }
+
+// .card {
+//   width: 300px;
+//   display: block;
+// }
+
+
+.card-images {
+  width: 100%;
+  background: linear-gradient(to right, rgba(255,0,0,0), rgba(255,0,0,1));
+  // filter: sepia(100%) saturate(300%) brightness(70%) hue-rotate(20deg);
+  // background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3))
+}
