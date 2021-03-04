@@ -17,13 +17,13 @@ User.create(email: "visitor@user.com", password: "password")
 User.create(email: "usertwo@user.com", password: "password")
 
 pyramids_of_giza = { name: "Pyramids of Giza", description: "A few triangles", price: 10000, address: 'The Great Pyramid of Giza' }
-great_barrier_reef = { name: "Great Barrier Reef", description: "Beautiful coral", price: 3000, address: '68 Flinders Street, Townsville' }
+great_barrier_reef = { name: "Great Barrier Reef", description: "Beautiful coral", price: 3000, address: 'Great Barrier Reef' }
 stonehenge = { name: "Stonehenge", description: "A few rocks", price: 1500, address: 'Salisbury SP4 7DE, United Kingdom' }
 great_wall_of_china = { name: "Great Wall of China", description: "A wall", price: 7000, address: 'Huairou District, China' }
 mt_everest = { name: "Mount Everest", description: "A hill", price: 4000, address: 'Mount Everest' }
 chichén_itzá = { name: "Chichén Itzá", description: "A Mayan city", price: 30000, address: 'Yucatan, Mexico' }
 petra = { name: "Petra", description: "Ancient city", price: 15000, address: 'Hashemite Kingdom of Jordan' }
-grand_canyon = { name: "Grand Canyon", description: "A natural formation with layered bands of red rock", price: 30000, address: 'Grand Cayon National Park' }
+grand_canyon = { name: "Grand Canyon", description: "A natural formation with layered bands of red rock", price: 30000, address: 'Grand Canyon National Park' }
 the_terracotta_army = { name: "The Terracotta Army", description: "Terracotta sculptures depicting the armies of Qin Shi Huang", price: 30000, address: "Lintong District, Xi'an, Shaanxi, China, 710612" }
 easter_islands = { name: "Easter Islands", description: "Human carvings by the Polynesian people of Chile", price: 30000, address: 'Easter Island' }
 angkor_wat = { name: "Angkor Wat", description: "Temples in Cambodia", price: 30000, address: 'Krong Siem Reap, Cambodia' }
