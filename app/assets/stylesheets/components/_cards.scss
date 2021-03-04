@@ -6,7 +6,7 @@
   box-shadow: 0 5px 10px rgba(0,0,0,0.1), 0 15px 40px rgba(166,173,201,.2);
   border-radius: 10px;
   text-decoration: none;
-  transition: transform 0.6s;
+  transition: transform 0.6s, box-shadow 0.6s;
   -webkit-backface-visibility: hidden;
 }
 
@@ -15,6 +15,9 @@
   // transform: rotate(3deg) skewY(3deg);
   -webkit-transform: translateY(-10px);
   transform: translateY(-10px);
+
+  -webkit-box-shadow: 0 10px 30px rgba(0,0,0,0.23), 0 15px 40px rgba(166,173,201,.2);
+  box-shadow: 0 10px 10px rgba(0,0,0,0.23), 0 15px 40px rgba(166,173,201,.2);
 }
 
 .card a:link {
