@@ -1,3 +1,4 @@
+<div class="container">
 <div class='show-banner' style="background-image: linear-gradient(rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.2) 50%), url(<%= cl_image_path(@portal.cover_photo.key,
 class: "card-images", height: 300, fit: :clip) %>); background-position: center;">
 
@@ -34,3 +35,5 @@ class: "card-images", height: 300, fit: :clip) %>); background-position: center;
     data-markers="<%= @markers.to_json %>"
     data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"></div>
     </div>
+</div>
+

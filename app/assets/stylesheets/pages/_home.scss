@@ -3,6 +3,14 @@
   background-position: center;
   padding: 150px 0;
   width: 100%;
+  height: calc(100vh - 76px);
+  text-align: center;
+  display: flex;
+  align-items: center;
+}
+
+.door-banner-container {
+  margin: auto;
 }
 
 .banner h1 {

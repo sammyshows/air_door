@@ -1,10 +1,12 @@
 <h1>Edit portal</h1>
 <p> Make quick fixes to your portal</p>
 
-<%= simple_form_for [ @portal ] do |f| %>
-  <%= f.input :name %>
-  <%= f.input :description %>
-  <%= f.input :price %>
-  <%= f.submit "Update Portal", class: "btn btn-success" %>
-<% end %>
+<div class="container">
+  <%= simple_form_for [ @portal ] do |f| %>
+    <%= f.input :name %>
+    <%= f.input :description %>
+    <%= f.input :price %>
+    <%= f.submit "Update Portal", class: "btn btn-success" %>
+  <% end %>
+</div>
 
