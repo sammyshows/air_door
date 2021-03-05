@@ -35,6 +35,7 @@ taj_mahal = { name: "Taj Mahal", description: "A mausoleum complex in Agra, Indi
 colosseum = { name: "Colosseum", description: "Amphitheater in Rome", price: 30000, address: 'Piazza del Colosseo, 1, 00184 Roma RM, Italy' }
 christ_the_redeemer = { name: "Christ the Redeemer", description: "A statue of Jesus", price: 1000000, address: 'Christ the Redeemer' }
 machu_picchu = { name: "Machu Picchu", description: "An Incan site near Cuzco, Peru", price: 30000, address: 'Machu Picchu' }
+mystery_portal = { name: "Mystery Portal", description: "Meet our God, The Great Paal", price: 30000, address: 'Machu Picchu' }
 
 
 
