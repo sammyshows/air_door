@@ -5,6 +5,7 @@
   <%= simple_form_for [ @portal ] do |f| %>
     <%= f.input :name %>
     <%= f.input :description %>
+    <%= f.input :address %>
     <%= f.input :price %>
     <%= f.input :cover_photo, as: :file %>
     <%= f.input :photos, as: :file, input_html: { multiple: true } %>

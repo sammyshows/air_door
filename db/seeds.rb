@@ -39,11 +39,11 @@ mystery_portal = { name: "Mystery Portal", description: "Meet our God, The Great
 
 
 
-[great_barrier_reef, pyramids_of_giza, stonehenge, great_wall_of_china, mt_everest, chichén_itzá, angkor_wat, grand_canyon, the_terracotta_army].each do |attributes|
+[great_barrier_reef, pyramids_of_giza, stonehenge, great_wall_of_china, mt_everest, chichén_itzá, angkor_wat, grand_canyon, the_terracotta_army, easter_islands, petra, banaue_rice_terraces, leaning_tower_of_pisa].each do |attributes|
   User.first.portals.create(attributes)
 end
 
-[easter_islands, petra, banaue_rice_terraces, leaning_tower_of_pisa, hagia_sophia, taj_mahal, colosseum, christ_the_redeemer, machu_picchu].each do |attributes|
+[hagia_sophia, taj_mahal, colosseum, christ_the_redeemer, machu_picchu].each do |attributes|
   User.last.portals.create(attributes)
 end
 
