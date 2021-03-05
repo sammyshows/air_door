@@ -1,4 +1,4 @@
-<h1>Portals</h1>
+<h1 id="index-page-header">All the best Portals in one place...</h1>
 
 <%= form_tag portals_path, method: :get do %>
   <%= text_field_tag :query,
@@ -11,21 +11,21 @@
 
 <div class="card-columns">
   <% @portals.each do |portal| %>
-    <% unless portal.user == current_user %>
-      <% if portal.cover_photo.attached? %>
-  <div class="card" >
-        <%= link_to portal_path(portal) do %>
-          <%= cl_image_tag(portal.cover_photo.key,
-                class: "card-images", height: 300, fit: :clip) %>
+    <div class="card" >
+      <%= link_to portal_path(portal) do %>
+        <% unless portal.user == current_user %>
+          <% if portal.cover_photo.attached? %>
+            <%= cl_image_tag(portal.cover_photo.key,
+              class: "card-images", height: 300, fit: :clip) %>
           <% end %>
         <% end %>
-      <li><%= link_to portal.name, portal_path(portal) %></li>
-    <div id="map"
-     style="width: 300px; height: 300px;"
-     data-markers="<%= @markers.to_json %>"
-     data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"></div>
-      <h5><%= portal.name %></h5>
-  </div>
+        <div id="card_details">
+          <h5><%= portal.name %></h5>
+          <p class="mb-3"><%= portal.description %></p>
+          <p><strong>$<%= portal.price %></strong></p>
+          <button class="btn btn-outline-success">Available</button>
+        </div>
       <% end %>
-    <% end %>
+    </div>
+  <% end %>
 </div>
