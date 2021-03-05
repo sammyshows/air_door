@@ -1,2 +1,60 @@
+.banner {
+  background-size: 100%;
+  background-position: center;
+  padding: 150px 0;
+  width: 100%;
+}
 
-  
+.banner h1 {
+  margin: 0;
+  color: white;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  font-size: 32px;
+  font-weight: bold;
+}
+
+.banner p {
+  font-size: 20px;
+  color: white;
+  opacity: .9;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+}
+
+.cards-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 16px;
+  color: black;
+
+  margin: 50px 50px 50px 50px;
+}
+
+.cards-header {
+  margin-top: 2rem;
+  margin-left: 60px;
+}
+
+.card-home {
+  width: 200px;
+  height: 200px;
+  background-position: center;
+  background-size: cover;
+  border-radius: 10px;
+  margin: 5px 5px 5px 5px;
+
+}
+
+.card-home:hover {
+  -webkit-transform: scale(1.05);
+  transform: scale(1.05);
+  -webkit-box-shadow: 0 10px 30px rgba(0,0,0,0.23), 0 15px 40px rgba(166,173,201,.2);
+  box-shadow: 0 10px 10px rgba(0,0,0,0.23), 0 15px 40px rgba(166,173,201,.2);
+}
+
+.cards-container p {
+  color: rgba(0, 0, 0, 0.5);
+}
+
+
+
+

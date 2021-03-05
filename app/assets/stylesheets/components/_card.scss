@@ -1,4 +1,4 @@
-.card {
+.show-card {
     background-size: cover;
     background-position: center;
     height: 150px;
@@ -13,7 +13,7 @@
     text-shadow: 0 0 10px rgba(0,0,0,0.7);
   }
   
-  .cards {
+  .show-cards {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-gap: 1em;

@@ -68,4 +68,7 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 # Geocoder
 gem 'geocoder'
 
+# PG Search
+gem 'pg_search', '~> 2.3.0'
+
 gem 'devise'

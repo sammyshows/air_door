@@ -11,6 +11,14 @@ class PortalsController < ApplicationController
     end
   end
 
+  def index
+     if params[:query].present?
+      @portals = Portal.where("name ILIKE ?", "%#{params[:query]}%")
+    else
+      @portals = Portal.all
+    end
+  end
+
   def show
       @markers = [{
       lat: @portal.latitude,
