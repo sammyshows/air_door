@@ -38,6 +38,7 @@
 }
 
 #card_details {
+  position: relative;
   margin: auto;
   padding: 12px;
   color: black;
@@ -46,10 +47,21 @@
   font-family: 'Noto Sans SC', sans-serif;
   font-weight: 100;
   p {
-    margin-bottom: 8px;
+    margin-bottom: 9px;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis
+  }
+  button {
+    position: absolute;
+    bottom: 17px;
+    right: 13px;
+    border-radius: 4px;
+    padding: 1px 12px;
+    &:hover {
+      background-color: #F4F4F4;
+      color: #1EDD88;
+    }
   }
 }
 
