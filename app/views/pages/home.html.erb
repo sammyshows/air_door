@@ -1,6 +1,36 @@
-<h1>AirDoor</h1>
-<p> 🌏 Unbelievable sights, Indescribable feeling! 🌏 </p>
-<p> 🎆 Soaring, tumbling, freewheeling. 🎆 </p>
-<p> ✨ Through an endless diamond sky ✨ </p>
 
-<%= link_to 'Explore portals', portals_path, class: "btn btn-primary" %>
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://i.redd.it/dimlwn3583v51.jpg);">
+  <div class="container">
+    <h1>AIR DOOR</h1>
+    <p>Unbelievable sights. Indescribable feeling</p>
+    <%= link_to 'Explore portals', portals_path, class: "btn btn-info" %>
+  </div>
+</div>
+
+<div class = "cards-container">
+ <h3> Our top picks </h3>
+
+
+    <div>
+     <div class="card-home" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(data:image/jpeg;base64,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)">
+    </div>
+    <h4> Taj Mahal </h4>
+    <p> A mausoleum complex in Agra, India </p>
+  </div>
+
+  <div>
+     <div class="card-home" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://i.pinimg.com/originals/c5/43/39/c5433916cbd47254a90c3b9c04e0b22b.jpg)">
+    </div>
+    <h4> Machu Picchu </h4>
+    <p>An Incan site near Cuzco, Peru</p>
+  </div>
+
+ <div>
+     <div class="card-home" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://lh3.googleusercontent.com/proxy/Dm4czZnAqyy7DkedrJAHESWdGBPWbVaAkRe7bYBN7LJ_mUwkxp788EgKiJuSqjlsMDfZYmo5f9t_RoSpafdpLFXVInS3R3apofLTHgxVI1RoE0MhHE8Yqta0Xh9HVWtWE6KQ0BT0o8_HWlAo27Ex70yky_1T3mqqSnNNLywSKTDqHBKVdbVZ1M8trD27vc-gBFRau2SMHskjNQ)">
+    </div>
+    <h4> Mystery Portal </h4>
+    <p> The mystery of life is not a problem to be solved but, a reality to be experienced</p>
+  </div>
+</div>
+
+
