@@ -12,9 +12,8 @@ class PortalsController < ApplicationController
   end
 
   def index
-    if params[:query].present?
-      sql_query = "title ILIKE :query OR synopsus ilike :query"
-      @portals = Portal.where(sql_query, query: "%#{params[:query]}%")
+     if params[:query].present?
+      @portals = Portal.where("name ILIKE ?", "%#{params[:query]}%")
     else
       @portals = Portal.all
     end
