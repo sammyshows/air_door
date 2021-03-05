@@ -25,8 +25,13 @@
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 16px;
   color: black;
-  text-align: center;
+
   margin: 50px 50px 50px 50px;
+}
+
+.cards-header {
+  margin-top: 2rem;
+  margin-left: 60px;
 }
 
 .card-home {
@@ -35,14 +40,20 @@
   background-position: center;
   background-size: cover;
   border-radius: 10px;
-  margin: 10px 10px 10px 10px;
-  // text-align: center;
+  margin: 5px 5px 5px 5px;
+
+}
+
+.card-home:hover {
+  -webkit-transform: scale(1.05);
+  transform: scale(1.05);
+  -webkit-box-shadow: 0 10px 30px rgba(0,0,0,0.23), 0 15px 40px rgba(166,173,201,.2);
+  box-shadow: 0 10px 10px rgba(0,0,0,0.23), 0 15px 40px rgba(166,173,201,.2);
 }
 
 .cards-container p {
   color: rgba(0, 0, 0, 0.5);
 }
-
 
 
 
