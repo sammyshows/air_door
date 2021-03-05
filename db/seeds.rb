@@ -16,6 +16,7 @@ User.create(email: "userone@user.com", password: "password")
 User.create(email: "visitor@user.com", password: "password")
 User.create(email: "usertwo@user.com", password: "password")
 
+
 great_barrier_reef = { name: "Great Barrier Reef", description: "Beautiful coral", price: 3000, address: '68 Flinders Street, Townsville' }
 pyramids_of_giza = { name: "Pyramids of Giza", description: "A few triangles", price: 10000, address: 'The Great Pyramid of Giza' }
 stonehenge = { name: "Stonehenge", description: "A few rocks", price: 1500, address: 'Salisbury SP4 7DE, United Kingdom' }
