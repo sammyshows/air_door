@@ -1,19 +1,39 @@
 <div class="container">
-  <h1>Portal</h1>
+<div class='show-banner' style="background-image: linear-gradient(rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.2) 50%), url(<%= cl_image_path(@portal.cover_photo.key,
+class: "card-images", height: 300, fit: :clip) %>); background-position: center;">
 
-    <h3><%= @portal.name %></h3>
-
-    <h5><%= @portal.description %></h5>
-
-    <h6><%= @portal.price %></h6>
-
-      <div id="map"
-      style="width: 400px; height: 300px;"
-      data-markers="<%= @markers.to_json %>"
-      data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"></div>
-
-    <br>
-
-    <%= link_to 'View all portals', portals_path, class: "btn btn-primary" %>
-    <%= link_to 'Create booking', new_portal_booking_path(@portal), class: "btn btn-success" %>
+    <div class="portal-details">
+        <h2><%= @portal.name %></h2>
+        <span><%= @portal.description %></>
+        <h6>$<%= @portal.price %></h6>
+    </div>
+    <div class="portal-buttons">
+        <%= link_to 'View all portals', portals_path, class: "btn btn-primary" %>
+        <%= link_to 'Create booking', new_portal_booking_path(@portal), class: "btn btn-success" %>
+    </div>
 </div>
+    <div class="container-cards-map">
+      <div class="show-cards">
+        <div class="show-card" style="background-image: url(<%= cl_image_path(@portal.photos[0].key,
+        class: "card-images", height: 600, fit: :clip) %>)">
+        </div>
+
+        <div class="show-card" style="background-image: url(<%= cl_image_path(@portal.photos[1].key,
+        class: "card-images", height: 600, fit: :clip) %>)">
+        </div>
+
+        <div class="show-card" style="background-image: url(<%= cl_image_path(@portal.photos[2].key,
+        class: "card-images", height: 600, fit: :clip) %>)">
+        </div>
+
+        <div class="show-card" style="background-image: url(<%= cl_image_path(@portal.photos[3].key,
+        class: "card-images", height: 600, fit: :clip) %>)">
+        </div>
+      </div>
+          <div id="map"
+    style="width: 500px; height: 315px; border-radius: 5px;"
+    data-markers="<%= @markers.to_json %>"
+    data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"></div>
+    </div>
+</div>
+
