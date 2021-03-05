@@ -1,6 +1,6 @@
-<div class='show-banner'>
-    <!-- <%= cl_image_tag(@portal.cover_photo.key,
-    class: "card-images", height: 600, fit: :clip) %> -->
+<div class='show-banner' style="background-image: linear-gradient(rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.2) 50%), url(<%= cl_image_path(@portal.cover_photo.key,
+class: "card-images", height: 300, fit: :clip) %>); background-position: center;">
+
     <div class="portal-details">
         <h2><%= @portal.name %></h2>
         <span><%= @portal.description %></>
@@ -13,20 +13,24 @@
 </div>
     <div class="container-cards-map">
       <div class="show-cards">
-        <div class="show-card" style="background-image: url(http://kitt.lewagon.com/placeholder/cities/rio)">
+        <div class="show-card" style="background-image: url(<%= cl_image_path(@portal.photos[0].key,
+        class: "card-images", height: 600, fit: :clip) %>)">
         </div>
 
-        <div class="show-card" style="background-image: url(http://kitt.lewagon.com/placeholder/cities/berlin)">
+        <div class="show-card" style="background-image: url(<%= cl_image_path(@portal.photos[1].key,
+        class: "card-images", height: 600, fit: :clip) %>)">
         </div>
 
-        <div class="show-card" style="background-image: url(http://kitt.lewagon.com/placeholder/cities/shanghai)">
+        <div class="show-card" style="background-image: url(<%= cl_image_path(@portal.photos[2].key,
+        class: "card-images", height: 600, fit: :clip) %>)">
         </div>
 
-        <div class="show-card" style="background-image: url(http://kitt.lewagon.com/placeholder/cities/melbourne)">
+        <div class="show-card" style="background-image: url(<%= cl_image_path(@portal.photos[3].key,
+        class: "card-images", height: 600, fit: :clip) %>)">
         </div>
       </div>
           <div id="map"
-    style="width: 400px; height: 315px; border-radius: 5px;"
+    style="width: 500px; height: 315px; border-radius: 5px;"
     data-markers="<%= @markers.to_json %>"
     data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"></div>
     </div>
