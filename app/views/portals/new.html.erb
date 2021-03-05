@@ -1,11 +1,13 @@
-<h1>New Portal</h1>
-<h5>Create your new portal here</h5>
-<br>
-<%= simple_form_for [ @portal ] do |f| %>
-  <%= f.input :name %>
-  <%= f.input :description %>
-  <%= f.input :price %>
-  <%= f.input :cover_photo, as: :file %>
-  <%= f.input :photos, as: :file, input_html: { multiple: true } %>
-  <%= f.submit "Add Portal", class: "btn btn-success" %>
-<% end %>
+<div class="container">
+  <h1>New Portal</h1>
+  <h5>Create your new portal here</h5>
+  <br>
+  <%= simple_form_for [ @portal ] do |f| %>
+    <%= f.input :name %>
+    <%= f.input :description %>
+    <%= f.input :price %>
+    <%= f.input :cover_photo, as: :file %>
+    <%= f.input :photos, as: :file, input_html: { multiple: true } %>
+    <%= f.submit "Add Portal", class: "btn btn-success" %>
+  <% end %>
+</div>
