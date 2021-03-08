@@ -11,7 +11,10 @@ class: "card-images", height: 300, fit: :clip) %>); background-position: center;
         <%= link_to 'Create booking', new_portal_booking_path(@portal), class: "btn btn-info" %>
     </div>
 </div>
-
+<a class="weatherwidget-io" href="https://forecast7.com/en/n37d81144d96/melbourne/" data-label_1="MELBOURNE" data-label_2="WEATHER" data-font="Play" data-icons="Climacons Animated" data-mode="Current" data-days="3" data-theme="pure" >MELBOURNE WEATHER</a>
+<script>
+!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src='https://weatherwidget.io/js/widget.min.js';fjs.parentNode.insertBefore(js,fjs);}}(document,'script','weatherwidget-io-js');
+</script>
 <div class="container-cards-map">
     <div class="show-cards">
         <div class="show-card" style="background-image: url(<%= cl_image_path(@portal.photos[0].key,
