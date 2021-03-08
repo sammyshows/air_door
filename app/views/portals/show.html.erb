@@ -11,11 +11,14 @@ class: "card-images", height: 300, fit: :clip) %>); background-position: center;
         <%= link_to 'Create booking', new_portal_booking_path(@portal), class: "btn btn-info" %>
     </div>
 </div>
-
-    <div class="container-cards-map">
-      <div class="show-cards">
+<a class="weatherwidget-io" href="https://forecast7.com/en/n37d81144d96/melbourne/" data-label_1="MELBOURNE" data-label_2="WEATHER" data-font="Play" data-icons="Climacons Animated" data-mode="Current" data-days="3" data-theme="pure" >MELBOURNE WEATHER</a>
+<script>
+!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src='https://weatherwidget.io/js/widget.min.js';fjs.parentNode.insertBefore(js,fjs);}}(document,'script','weatherwidget-io-js');
+</script>
+<div class="container-cards-map">
+    <div class="show-cards">
         <div class="show-card" style="background-image: url(<%= cl_image_path(@portal.photos[0].key,
-        class: "card-images", height: 600, fit: :clip) %>)">
+        class: "card-images", height: 600, fit: :clip) %>)"> 
         </div>
 
         <div class="show-card" style="background-image: url(<%= cl_image_path(@portal.photos[1].key,
@@ -29,11 +32,12 @@ class: "card-images", height: 300, fit: :clip) %>); background-position: center;
         <div class="show-card" style="background-image: url(<%= cl_image_path(@portal.photos[3].key,
         class: "card-images", height: 600, fit: :clip) %>)">
         </div>
-      </div>
-          <div id="map"
-    style="width: 500px; height: 315px; border-radius: 5px;"
-    data-markers="<%= @markers.to_json %>"
-    data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"></div>
     </div>
+    <div id="map"
+        style="width: 500px; height: 315px; border-radius: 5px;"
+        data-markers="<%= @markers.to_json %>"
+        data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
+    </div>
+</div>
 
 
