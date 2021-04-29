@@ -74,15 +74,28 @@ while i < url.length
   i += 1
 end
 
-file = URI.open("https://images.unsplash.com/photo-1544622428-56b8d9eed7db?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1500&q=80")
-Portal.find(15).photos.attach(io: file, filename: "tajmahal1.jpg", content_type: 'image/jpg')
+x = 1
+file = URI.open("https://images.unsplash.com/photo-1547039996-61c1135690c0?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2697&q=80")
+Portal.each do |portal|
+  portal.photos.attach(io: file, filename: "generic-pic#{x}.jpg", content_type: 'image/jpg')
+  x += 1
+end
 
-file = URI.open("https://images.unsplash.com/photo-1575489181784-a99aa58e4bb5?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=2791&q=80")
-Portal.find(15).photos.attach(io: file, filename: "tajmahal2.jpg", content_type: 'image/jpg')
+file = URI.open("https://images.unsplash.com/photo-1450387635522-8ecb968079bf?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2722&q=80")
+Portal.each do |portal|
+  portal.photos.attach(io: file, filename: "generic-pic#{x}.jpg", content_type: 'image/jpg')
+  x += 1
+end
 
-file = URI.open("https://images.unsplash.com/photo-1524491887412-14c265900364?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1780&q=80")
-Portal.find(15).photos.attach(io: file, filename: "tajmahal3.jpg", content_type: 'image/jpg')
+file = URI.open("https://images.unsplash.com/photo-1513735539099-cf6e5d559d82?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2882&q=80")
+Portal.each do |portal|
+  portal.photos.attach(io: file, filename: "generic-pic#{x}.jpg", content_type: 'image/jpg')
+  x += 1
+end
 
-file = URI.open("https://images.unsplash.com/photo-1598639753591-053c3e1477dd?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1908&q=80")
-Portal.find(15).photos.attach(io: file, filename: "tajmahal4.jpg", content_type: 'image/jpg')
+file = URI.open("https://images.unsplash.com/photo-1499336315816-097655dcfbda?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2710&q=80")
+Portal.each do |portal|
+  portal.photos.attach(io: file, filename: "generic-pic#{x}.jpg", content_type: 'image/jpg')
+  x += 1
+end
 
