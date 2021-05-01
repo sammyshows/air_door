@@ -1,6 +1,6 @@
 class PortalsController < ApplicationController
+  skip_before_action :authenticate_user!
   before_action :set_portal, only: [:show, :edit, :update, :destroy]
-
   def index
     @portals = Portal.all
     @markers = @portals.geocoded.map do |portal|
