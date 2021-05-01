@@ -75,27 +75,29 @@ while i < url.length
 end
 
 x = 1
-file = URI.open("https://images.unsplash.com/photo-1547039996-61c1135690c0?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2697&q=80")
-Portal.each do |portal|
-  portal.photos.attach(io: file, filename: "generic-pic#{x}.jpg", content_type: 'image/jpg')
+while x < 18
+  file = URI.open("https://images.unsplash.com/photo-1547039996-61c1135690c0?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2697&q=80")
+  Portal.find(x).photos.attach(io: file, filename: "first-generic-pic#{x}.jpg", content_type: 'image/jpg')
   x += 1
 end
 
-file = URI.open("https://images.unsplash.com/photo-1450387635522-8ecb968079bf?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2722&q=80")
-Portal.each do |portal|
-  portal.photos.attach(io: file, filename: "generic-pic#{x}.jpg", content_type: 'image/jpg')
+x = 1
+while x < 18
+  file = URI.open("https://images.unsplash.com/photo-1450387635522-8ecb968079bf?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2722&q=80")
+  Portal.find(x).photos.attach(io: file, filename: "second-generic-pic#{x}.jpg", content_type: 'image/jpg')
   x += 1
 end
 
-file = URI.open("https://images.unsplash.com/photo-1513735539099-cf6e5d559d82?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2882&q=80")
-Portal.each do |portal|
-  portal.photos.attach(io: file, filename: "generic-pic#{x}.jpg", content_type: 'image/jpg')
+x = 1
+while x < 18
+  file = URI.open("https://images.unsplash.com/photo-1513735539099-cf6e5d559d82?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2882&q=80")
+  Portal.find(x).photos.attach(io: file, filename: "third-generic-pic#{x}.jpg", content_type: 'image/jpg')
   x += 1
 end
 
-file = URI.open("https://images.unsplash.com/photo-1499336315816-097655dcfbda?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2710&q=80")
-Portal.each do |portal|
-  portal.photos.attach(io: file, filename: "generic-pic#{x}.jpg", content_type: 'image/jpg')
+x = 1
+while x < 18
+  file = URI.open("https://images.unsplash.com/photo-1499336315816-097655dcfbda?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2710&q=80")
+  Portal.find(x).photos.attach(io: file, filename: "fourth-generic-pic#{x}.jpg", content_type: 'image/jpg')
   x += 1
 end
-
